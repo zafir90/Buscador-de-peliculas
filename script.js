@@ -6,6 +6,16 @@ let urlImg = 'https://image.tmdb.org/t/p/w200'
 
 let resultContainer = document.getElementById('results')
 
+// Obtener el campo de entrada de texto por su ID
+let campoTexto = document.getElementById('searchInput');
+
+campoTexto.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        // Simula hacer clic en el botón
+        searchButton.click();
+    }
+});
+
 function searchMovie() {
     resultContainer.innerHTML = 'Cargando...'
     let searchInput = document.getElementById('searchInput').value
